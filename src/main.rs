@@ -10,7 +10,7 @@ where
 }
 
 fn main() {
-    println!("Hello, world!");
+    println!("Hello, world! But better 😏");
 }
 
 #[cfg(test)]
