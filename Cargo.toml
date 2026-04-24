@@ -1,6 +1,6 @@
 [package]
 name = "github-actions"
-version = "0.1.0"
+version = "0.2.0"
 description = "Using cargo-dist and cargo-release with github actions"
 license = "MIT"
 edition = "2024"
