@@ -71,7 +71,7 @@ Then run `cargo-release`, by default it will do a dry-run (just tell you what it
 cargo release
 ```
 
-You can also increase your version number by using one of these
+You can also increase your version number (new git tag, and will update `Cargo.toml` `version`) by using one of these
 
 ```sh
 cargo release patch  # Increment by 0.0.1, a bug fix
