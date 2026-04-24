@@ -2,6 +2,9 @@
 
 Im not even using then, cargo-dist just generated all of it
 
+[cargo-release](https://axodotdev.github.io/cargo-dist/book/workspaces/cargo-release-guide.html#cargo-release-basics)
+[dist](https://axodotdev.github.io/cargo-dist/book/quickstart/rust.html)
+
 Anyways here is what I understood about it:
 
 first install `dist` (and optionally `cargo release`)
