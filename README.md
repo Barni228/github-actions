@@ -2,10 +2,12 @@
 
 Im not even using then, cargo-dist just generated all of it
 
-[cargo-release](https://axodotdev.github.io/cargo-dist/book/workspaces/cargo-release-guide.html#cargo-release-basics)
+[cargo-release](https://axodotdev.github.io/cargo-dist/book/workspaces/cargo-release-guide.html#cargo-release-basics)  
 [dist](https://axodotdev.github.io/cargo-dist/book/quickstart/rust.html)
 
 Anyways here is what I understood about it:
+
+## Setup
 
 first install `dist` (and optionally `cargo release`)
 
@@ -37,7 +39,7 @@ repository = "https://github.com/Barni228/github-actions" # need this for dist
 
 Then in your rust project, run
 
-```
+```sh
 dist init
 ```
 
@@ -54,15 +56,17 @@ x64 Windows (x86_64-pc-windows-msvc)        # Windows
 When it asks `what installers do you want to build?`, if you want other people to install your tool then choose shell and powershell
 
 ```
-shell
-powershell
+shell           # for MacOS, Linux, and Windows with git-bash
+powershell      # for windows powershell
 ```
 
 If it asks if it should generate github actions (or `CI`), choose `yes`
 
 If something goes wrong, fix it and run `dist init` again (`dist init` is made to be re-run a bunch of times, every time you want to change something)
 
-Then, to release ur thing to GitHub, first tell `cargo-release` to not publish to crates.io
+## Release
+
+to release your cli to GitHub, first tell `cargo-release` to not publish to crates.io
 
 ```sh
 echo publish = false > release.toml
@@ -89,12 +93,16 @@ It will tell it to actually release ur thing to github
 cargo release --execute
 ```
 
-Then in GitHub, go to your repo, Click ` Tag` (or `Tags`)
-In there, you will find version numbers, click the most recent one
-And Done!, It will show you a `curl` and `powershell` command to install the cli app
+## Install
+
+GitHub, go to your repo, Click ` Tag` (or `Tags`)
+In there, you will find version numbers, click the most recent one.
+It will show you a `curl` and `powershell` command to install the cli app
 As well as showing a table with every binary and which os it is for
 
 Best way to download the app is with the `curl` command, which works on linux mac and windows git-bash
+
+## Uninstall
 
 To uninstall the app, run
 
@@ -119,4 +127,10 @@ Or if you like to delete stuff without any idea of what ur deleting:
 
 ```sh
 rm $(which app_name)
+```
+
+Best way, just ask for confirmation:
+
+```sh
+rm -i $(which app_name)
 ```
