@@ -1,0 +1,13 @@
+[package]
+name = "github-actions"
+version = "0.1.0"
+edition = "2024"
+repository = "https://github.com/Barni228/github-actions"
+
+[dependencies]
+num-traits = "0.2.19"
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
