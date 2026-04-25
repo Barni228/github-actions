@@ -23,6 +23,7 @@ mod tests {
     }
 
     #[test]
+    #[should_panic]
     fn it_fails() {
         assert_eq!(add::<i8>(2, 2), 5);
     }

@@ -134,3 +134,36 @@ Best way, just ask for confirmation:
 ```sh
 rm -i $(which app_name)
 ```
+
+## Pre-commit hook
+
+here is how to make pre-commit hook:
+first, create it:
+
+```sh
+touch .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+```
+
+And in there, write:
+
+```sh
+#!/bin/sh
+
+echo "Running tests..."
+
+cargo test --quiet
+
+if [ $? -ne 0 ]; then
+  echo "Tests failed. Commit aborted."
+  exit 1
+fi
+```
+
+Or a shorter version, since `cargo test` does a good job of telling you that tests are running:
+
+```sh
+#!/bin/sh
+cargo test --quiet
+exit $?  # exit with same exit code as the previous command
+```
