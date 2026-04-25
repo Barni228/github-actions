@@ -21,4 +21,9 @@ mod tests {
     fn it_works() {
         assert_eq!(add::<usize>(2i32, 2u8), 4);
     }
+
+    #[test]
+    fn it_fails() {
+        assert_eq!(add::<i8>(2, 2), 5);
+    }
 }
