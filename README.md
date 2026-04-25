@@ -1,6 +1,6 @@
 # Using github actions for the first time
 
-Im not even using then, cargo-dist just generated all of it
+Im not even using them, cargo-dist just generated all of it
 
 [cargo-release](https://axodotdev.github.io/cargo-dist/book/workspaces/cargo-release-guide.html#cargo-release-basics)  
 [dist](https://axodotdev.github.io/cargo-dist/book/quickstart/rust.html)
