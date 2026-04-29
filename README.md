@@ -64,6 +64,9 @@ If it asks if it should generate github actions (or `CI`), choose `yes`
 
 If something goes wrong, fix it and run `dist init` again (`dist init` is made to be re-run a bunch of times, every time you want to change something)
 
+AFTER SETTING UP `dist`, RUN `git push` IMMEDIATELY (if you don't push, github will not see the new github action,
+and so when you run `cargo release` it will not trigger the release action)
+
 ## Release
 
 to release your cli to GitHub, first tell `cargo-release` to not publish to crates.io
